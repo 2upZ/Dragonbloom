@@ -1,0 +1,2027 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><title>Character Sheet Template</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Quartz 4"/><meta property="og:title" content="Character Sheet Template"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Character Sheet Template"/><meta name="twitter:description" content="Character Name ---tab General ![[#general|no-h1 full clean]] ---tab Description ![[#description|no-h1 full clean]] ---tab Image Gallery ![[#image-gallery|no-h1 full clean]] ---tab Config ![[#config|no-h1 full clean]] ---tab Quick Ref."/><meta property="og:description" content="Character Name ---tab General ![[#general|no-h1 full clean]] ---tab Description ![[#description|no-h1 full clean]] ---tab Image Gallery ![[#image-gallery|no-h1 full clean]] ---tab Config ![[#config|no-h1 full clean]] ---tab Quick Ref."/><meta property="og:image:alt" content="Character Name ---tab General ![[#general|no-h1 full clean]] ---tab Description ![[#description|no-h1 full clean]] ---tab Image Gallery ![[#image-gallery|no-h1 full clean]] ---tab Config ![[#config|no-h1 full clean]] ---tab Quick Ref."/><meta property="twitter:domain" content="quartz.jzhao.xyz"/><meta property="og:url" content="https://quartz.jzhao.xyz/Jugadores/Cupcaekes-Obsidian-DnD5e-Character-Sheet-Template-main/Character-Sheet-Template"/><meta property="twitter:url" content="https://quartz.jzhao.xyz/Jugadores/Cupcaekes-Obsidian-DnD5e-Character-Sheet-Template-main/Character-Sheet-Template"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="Character Name ---tab General ![[#general|no-h1 full clean]] ---tab Description ![[#description|no-h1 full clean]] ---tab Image Gallery ![[#image-gallery|no-h1 full clean]] ---tab Config ![[#config|no-h1 full clean]] ---tab Quick Ref."/><meta name="generator" content="Quartz"/><link href="../../index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiQzpcXFVzZXJzXFxEYW5pXFxEZXNrdG9wXFxSb2xsXFxxdWFydHpcXHF1YXJ0elxcY29tcG9uZW50c1xcc3R5bGVzIiwic291cmNlcyI6WyJtZXJtYWlkLmlubGluZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFHRjtFQUNFOzs7QUFLRjtFQUNFO0VBQ0E7OztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTs7QUFJRjtFQUNFO0VBQ0E7RUFDQSIsInNvdXJjZXNDb250ZW50IjpbIi5leHBhbmQtYnV0dG9uIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbG9hdDogcmlnaHQ7XG4gIHBhZGRpbmc6IDAuNHJlbTtcbiAgbWFyZ2luOiAwLjNyZW07XG4gIHJpZ2h0OiAwOyAvLyBOT1RFOiByaWdodCB3aWxsIGJlIHNldCBpbiBtZXJtYWlkLmlubGluZS50c1xuICBjb2xvcjogdmFyKC0tZ3JheSk7XG4gIGJvcmRlci1jb2xvcjogdmFyKC0tZGFyayk7XG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgYm9yZGVyOiAxcHggc29saWQ7XG4gIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgb3BhY2l0eTogMDtcbiAgdHJhbnNpdGlvbjogMC4ycztcblxuICAmID4gc3ZnIHtcbiAgICBmaWxsOiB2YXIoLS1saWdodCk7XG4gICAgZmlsdGVyOiBjb250cmFzdCgwLjMpO1xuICB9XG5cbiAgJjpob3ZlciB7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIGJvcmRlci1jb2xvcjogdmFyKC0tc2Vjb25kYXJ5KTtcbiAgfVxuXG4gICY6Zm9jdXMge1xuICAgIG91dGxpbmU6IDA7XG4gIH1cbn1cblxucHJlIHtcbiAgJjpob3ZlciA+IC5leHBhbmQtYnV0dG9uIHtcbiAgICBvcGFjaXR5OiAxO1xuICAgIHRyYW5zaXRpb246IDAuMnM7XG4gIH1cbn1cblxuI21lcm1haWQtY29udGFpbmVyIHtcbiAgcG9zaXRpb246IGZpeGVkO1xuICBjb250YWluOiBsYXlvdXQ7XG4gIHotaW5kZXg6IDk5OTtcbiAgbGVmdDogMDtcbiAgdG9wOiAwO1xuICB3aWR0aDogMTAwdnc7XG4gIGhlaWdodDogMTAwdmg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIGRpc3BsYXk6IG5vbmU7XG4gIGJhY2tkcm9wLWZpbHRlcjogYmx1cig0cHgpO1xuICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuNSk7XG5cbiAgJi5hY3RpdmUge1xuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgfVxuXG4gICYgPiAjbWVybWFpZC1zcGFjZSB7XG4gICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICB0b3A6IDUwJTtcbiAgICBsZWZ0OiA1MCU7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XG4gICAgaGVpZ2h0OiA4MHZoO1xuICAgIHdpZHRoOiA4MHZ3O1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG5cbiAgICAmID4gLm1lcm1haWQtY29udGVudCB7XG4gICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICB0cmFuc2Zvcm0tb3JpZ2luOiAwIDA7XG4gICAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMC4xcyBlYXNlO1xuICAgICAgb3ZlcmZsb3c6IHZpc2libGU7XG4gICAgICBtaW4taGVpZ2h0OiAyMDBweDtcbiAgICAgIG1pbi13aWR0aDogMjAwcHg7XG5cbiAgICAgIHByZSB7XG4gICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgYm9yZGVyOiBub25lO1xuICAgICAgfVxuXG4gICAgICBzdmcge1xuICAgICAgICBtYXgtd2lkdGg6IG5vbmU7XG4gICAgICAgIGhlaWdodDogYXV0bztcbiAgICAgIH1cbiAgICB9XG5cbiAgICAmID4gLm1lcm1haWQtY29udHJvbHMge1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgYm90dG9tOiAyMHB4O1xuICAgICAgcmlnaHQ6IDIwcHg7XG4gICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgZ2FwOiA4cHg7XG4gICAgICBwYWRkaW5nOiA4cHg7XG4gICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgYm9yZGVyLXJhZGl1czogNnB4O1xuICAgICAgYm94LXNoYWRvdzogMCAycHggNHB4IHJnYmEoMCwgMCwgMCwgMC4xKTtcbiAgICAgIHotaW5kZXg6IDI7XG5cbiAgICAgIC5tZXJtYWlkLWNvbnRyb2wtYnV0dG9uIHtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICAgIHdpZHRoOiAzMnB4O1xuICAgICAgICBoZWlnaHQ6IDMycHg7XG4gICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgICAgY29sb3I6IHZhcigtLWRhcmspO1xuICAgICAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgICAgICBmb250LWZhbWlseTogdmFyKC0tYm9keUZvbnQpO1xuICAgICAgICB0cmFuc2l0aW9uOiBhbGwgMC4ycyBlYXNlO1xuXG4gICAgICAgICY6aG92ZXIge1xuICAgICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIH1cblxuICAgICAgICAmOmFjdGl2ZSB7XG4gICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDFweCk7XG4gICAgICAgIH1cblxuICAgICAgICAvLyBTdHlsZSB0aGUgcmVzZXQgYnV0dG9uIGRpZmZlcmVudGx5XG4gICAgICAgICY6bnRoLWNoaWxkKDIpIHtcbiAgICAgICAgICB3aWR0aDogYXV0bztcbiAgICAgICAgICBwYWRkaW5nOiAwIDEycHg7XG4gICAgICAgICAgZm9udC1zaXplOiAxNHB4O1xuICAgICAgICB9XG4gICAgICB9XG4gICAgfVxuICB9XG59XG4iXX0= */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://quartz.jzhao.xyz/index.xml"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://quartz.jzhao.xyz/Jugadores/Cupcaekes-Obsidian-DnD5e-Character-Sheet-Template-main/Character-Sheet-Template-og-image.webp"/><meta property="og:image:url" content="https://quartz.jzhao.xyz/Jugadores/Cupcaekes-Obsidian-DnD5e-Character-Sheet-Template-main/Character-Sheet-Template-og-image.webp"/><meta name="twitter:image" content="https://quartz.jzhao.xyz/Jugadores/Cupcaekes-Obsidian-DnD5e-Character-Sheet-Template-main/Character-Sheet-Template-og-image.webp"/><meta property="og:image:type" content="image/.webp"/></head><body data-slug="Jugadores/Cupcaekes-Obsidian-DnD5e-Character-Sheet-Template-main/Character-Sheet-Template"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../..">Quartz 4</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>Search</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Dark mode"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Light mode"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="Reader mode"><title>Reader mode</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-714"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-714" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../Jugadores/">Jugadores</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../Jugadores/Cupcaekes-Obsidian-DnD5e-Character-Sheet-Template-main/">Cupcaekes Obsidian DnD5e Character Sheet Template main</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Character Sheet Template</a></div></nav><h1 class="article-title">Character Sheet Template</h1><p show-comma="true" class="content-meta"><time datetime="2026-01-03T19:52:53.000Z">Jan 03, 2026</time><span>6 min read</span></p><ul class="tags"><li><a href="../../tags/action" class="internal tag-link">action</a></li><li><a href="../../tags/bonus-action" class="internal tag-link">bonus-action</a></li></ul></div></div><article class="popover-hint tag-bubble"><h1 id="character-name"><strong>Character Name</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#character-name" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="tabs" data-theme="github-light github-dark"><code data-language="tabs" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>---tab General</span></span>
+<span data-line><span>![[#general|no-h1 full clean]]</span></span>
+<span data-line><span>---tab Description</span></span>
+<span data-line><span>![[#description|no-h1 full clean]]</span></span>
+<span data-line><span>---tab Image Gallery</span></span>
+<span data-line><span>![[#image-gallery|no-h1 full clean]]</span></span>
+<span data-line><span>---tab Config</span></span>
+<span data-line><span>![[#config|no-h1 full clean]]</span></span>
+<span data-line><span>---tab Quick Ref.</span></span>
+<span data-line><span>![[#quick-reference|no-h1 full clean]]</span></span>
+<span data-line><span>---Abilities</span></span>
+<span data-line><span>![[#abilities|no-h1 full clean]]</span></span>
+<span data-line><span>---Equipment</span></span>
+<span data-line><span>![[#equipment|no-h1 full clean]]</span></span>
+<span data-line><span>---Inventory</span></span>
+<span data-line><span>![[#inventory|no-h1 full clean]]</span></span>
+<span data-line><span>---Spellcasting</span></span>
+<span data-line><span>![[#spellcasting|no-h1 full clean]]</span></span>
+<span data-line><span>---Features &amp; Traits</span></span>
+<span data-line><span>![[#features--traits|no-h1 full clean]]</span></span>
+<span data-line><span>---Backstory</span></span>
+<span data-line><span>![[#backstory|no-h1 full clean]]</span></span>
+<span data-line><span>---Misc.</span></span>
+<span data-line><span>![[#misc|no-h1 full clean]]</span></span>
+<span data-line><span>---Notes</span></span>
+<span data-line><span>![[#notes|no-h1 full clean]]</span></span></code></pre></figure>
+<hr/>
+<hr/>
+<h1 id="general">General<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#general" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="#general" class="internal alias">🔗</a></p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="event-btns" data-theme="github-light github-dark"><code data-language="event-btns" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>items:</span></span>
+<span data-line><span>  - name: Short Rest</span></span>
+<span data-line><span>    value: short-rest</span></span>
+<span data-line><span>  - name: Long Rest</span></span>
+<span data-line><span>    value: long-rest</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="badges" data-theme="github-light github-dark"><code data-language="badges" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>items:</span></span>
+<span data-line><span>  - label: Level</span></span>
+<span data-line><span>    value: '{{ frontmatter.CL }}'</span></span>
+<span data-line><span>  - label: Prof. Bonus</span></span>
+<span data-line><span>    value: '+{{ frontmatter.proficiency_bonus }}'</span></span>
+<span data-line><span>  - label: AC</span></span>
+<span data-line><span>    value: '{{ frontmatter.ac }}'</span></span>
+<span data-line><span>  - label: Initiative</span></span>
+<span data-line><span>    value: '{{ modifier abilities.dexterity }}'</span></span>
+<span data-line><span>  - label: Speed</span></span>
+<span data-line><span>    value: '{{ frontmatter.speed }}'</span></span>
+<span data-line><span>  - label: Inspiration</span></span>
+<span data-line><span>    value: '[ ]'</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="healthpoints" data-theme="github-light github-dark"><code data-language="healthpoints" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>state_key: my_character_hp</span></span>
+<span data-line><span>health: '{{ frontmatter.hp }}'</span></span>
+<span data-line><span>death_saves: true</span></span>
+<span data-line><span>hitdice:</span></span>
+<span data-line><span>  dice: d8</span></span>
+<span data-line><span>  value: 3</span></span></code></pre></figure>
+<blockquote class="callout column" data-callout="column" data-callout-metadata="no-t">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Column</p></div>
+                  
+                </div>
+<div class="callout-content">
+<blockquote class="callout recite" data-callout="recite">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Consumable 1 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="consumable" data-theme="github-light github-dark"><code data-language="consumable" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>items:</span></span>
+<span data-line><span> - label: &quot;SP-SD-BI-ETC&quot;</span></span>
+<span data-line><span>   state_key: my_character_consum</span></span>
+<span data-line><span>   uses: 2</span></span>
+<span data-line><span>   reset_on: long-rest</span></span></code></pre></figure>
+</div>
+</blockquote>
+<blockquote class="callout recite" data-callout="recite">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Consumable 2 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="consumable" data-theme="github-light github-dark"><code data-language="consumable" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>items:</span></span>
+<span data-line><span> - label: &quot;SP-SD-BI-ETC&quot;</span></span>
+<span data-line><span>   state_key: my_character_consum</span></span>
+<span data-line><span>   uses: 2</span></span>
+<span data-line><span>   reset_on: long-rest</span></span></code></pre></figure>
+</div>
+</blockquote>
+</div>
+</blockquote>
+<h1 id="description">Description<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#description" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="#description" class="internal alias">🔗</a></p>
+<blockquote class="callout columns" data-callout="columns" data-callout-metadata="no-t">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Columns</p></div>
+                  
+                </div>
+<div class="callout-content">
+<blockquote class="callout recite" data-callout="recite" data-callout-metadata="bg-white t-w">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Character Info </p></div>
+                  
+                </div>
+<div class="callout-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Info</th><th>Description</th></tr></thead><tbody><tr><td><strong>Class &amp; Level</strong></td><td><code>INPUT[text(placeholder(Class &amp; Level)):CL]</code></td></tr><tr><td><strong>Race</strong></td><td><code>INPUT[text(placeholder(Race)):RACE]</code></td></tr><tr><td><strong>Background</strong></td><td><code>INPUT[text(placeholder(Background)):BG]</code></td></tr><tr><td><strong>Alignment</strong></td><td><code>INPUT[text(placeholder(Alignment)):ALIGN]</code></td></tr><tr><td><strong>Player Name</strong></td><td><code>INPUT[text(placeholder(Player)):PN]</code></td></tr><tr><td><strong>Experience</strong></td><td><code>INPUT[text(placeholder(EXP)):EXP]</code></td></tr></tbody></table></div>
+</div>
+</blockquote>
+<blockquote class="callout recite" data-callout="recite" data-callout-metadata="bg-white t-w">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Character Appearance </p></div>
+                  
+                </div>
+<div class="callout-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Info</th><th>Description</th></tr></thead><tbody><tr><td><strong>Age</strong></td><td><code>INPUT[text(placeholder(Age)):AGE]</code></td></tr><tr><td><strong>Height</strong></td><td><code>INPUT[text(placeholder(Height)):HI]</code></td></tr><tr><td><strong>Weight</strong></td><td><code>INPUT[text(placeholder(Weight)):LBS]</code></td></tr><tr><td><strong>Eyes</strong></td><td><code>INPUT[text(placeholder(Eyes)):EYE]</code></td></tr><tr><td><strong>Skin</strong></td><td><code>INPUT[text(placeholder(Skin/Fur/Etc)):SKIN]</code></td></tr><tr><td><strong>Hair</strong></td><td><code>INPUT[text(placeholder(Hair)):HAIR]</code></td></tr></tbody></table></div>
+</div>
+</blockquote>
+<blockquote class="callout recite" data-callout="recite" data-callout-metadata="bg-white">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Personality Traits <code>INPUT[textArea(placeholder(Personality Traits or Quote)):PERS]</code></p></div>
+                  
+                </div>
+</blockquote>
+<blockquote class="callout recite" data-callout="recite" data-callout-metadata="bg-white">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Ideals <code>INPUT[textArea(placeholder(Ideals and Morals)):IDEAL]</code></p></div>
+                  
+                </div>
+</blockquote>
+<blockquote class="callout recite" data-callout="recite" data-callout-metadata="bg-white">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Bonds <code>INPUT[textArea(placeholder(Bonds and Boundaries)):BOND]</code></p></div>
+                  
+                </div>
+</blockquote>
+<blockquote class="callout recite" data-callout="recite" data-callout-metadata="bg-white">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Flaws <code>INPUT[textArea(placeholder(Flaws and Fears)):FLAW]</code></p></div>
+                  
+                </div>
+</blockquote>
+</div>
+</blockquote>
+<h1 id="image-gallery">Image Gallery<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#image-gallery" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="#image-gallery" class="internal alias">🔗</a></p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="meta-bind" data-theme="github-light github-dark"><code data-language="meta-bind" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>INPUT[imageListSuggester:IMAGE]</span></span></code></pre></figure>
+<h1 id="config">Config<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#config" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="#config" class="internal alias">🔗</a></p>
+<blockquote class="callout columns" data-callout="columns" data-callout-metadata="no-t">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Columns</p></div>
+                  
+                </div>
+<div class="callout-content">
+<blockquote class="callout recite" data-callout="recite" data-callout-metadata="bg-white no-t t-w">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Recite</p></div>
+                  
+                </div>
+<div class="callout-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Info</th><th>Description</th></tr></thead><tbody><tr><td><strong>Total Level</strong></td><td><code>INPUT[number(placeholder(Level)):level]</code></td></tr><tr><td><strong>Proficiency Bonus</strong></td><td><code>INPUT[number(placeholder(+X)):proficiency_bonus]</code></td></tr><tr><td><strong>Max Hit Points</strong></td><td><code>INPUT[number(placeholder(Hit Die + CON)):hp]</code></td></tr><tr><td><strong>Armor Class</strong></td><td><code>INPUT[number(placeholder(Check Equipment for more)):ac]</code></td></tr><tr><td><strong>Speed</strong></td><td><code>INPUT[number(placeholder(Walking Speed)):speed]</code></td></tr><tr><td>Leave <strong>Proficiency Bonus</strong> blank to automatically calculate based on <strong>Total Level</strong>.</td><td></td></tr></tbody></table></div>
+</div>
+</blockquote>
+<blockquote class="callout recite" data-callout="recite" data-callout-metadata="bg-white">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>State Keys <code>my_character</code> with your character name (Or whatever your preference is! Just <em>make sure</em> that the state key is unique across your entire vault). State keys tend to appear wherever there are checkboxes. Specifically, they appear in the <code>healthpoints</code> block and the <code>consumable</code> blocks.</p></div>
+                  
+                </div>
+<p>Character sheets each need unique state keys in order to function wherever they appear. You can edit the code blocks where they appear, replacing </p>
+</blockquote>
+<blockquote class="callout recite" data-callout="recite" data-callout-metadata="bg-white">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Ability Scores &amp; Skills <code>ability</code> code block under the <a href="#abilities" class="internal alias">Abilities</a> section. You can also adjust your saving throws under the <code>proficiencies</code> section of that code block. Lastly, you can add bonuses (like from items and features) in the <code>bonuses</code> section of the code block following the structure provided. You can change your skill proficiencies within the <code>skills</code> code block right beneath.</p></div>
+                  
+                </div>
+<p>Your character’s ability scores need to be modified in the </p>
+</blockquote>
+<blockquote class="callout recite" data-callout="recite" data-callout-metadata="bg-yellow">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Tips and Credits <a href="https://help.obsidian.md/syntax" class="external">Obsidian<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>, <a href="https://publish.obsidian.md/slrvb-docs/ITS+Theme/ITS+Theme" class="external">ITS Theme<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>, <a href="https://hay-kot.github.io/obsidian-dnd-ui-toolkit/" class="external">DND UI Toolkit<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>, <a href="https://www.moritzjung.dev/obsidian-meta-bind-plugin-docs/" class="external">MetaBind<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>.
+Additionally, if you need to add any new text boxes or in-table check boxes, check the MetaBind plugin documentation (listed above). You will need to add a new unique Property (at the top of the Note) and tie it to the INPUT field you created.
+Lastly, this Vault comes with an alphabetical Spellbook folder. It is recommended to link your spells in <a href="#spellcasting" class="internal alias">Spellcasting</a> to those notes for easy access. Items placed in the Equipment section can also be linked in the <a href="#inventory" class="internal alias">Inventory</a> section for quick descriptions. Using tags on Features &amp; Traits such as Action, Bonus Action, or Reaction can help sort abilities quicker.
+This character sheet template was made lovingly by <a href="https://cupcaeke.carrd.co" class="external">Cupcaeke<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>. I made this to work as a sort of middle-ground between a good ole pdf/paper sheet and something like DNDBeyond or Orcpub. I hope you enjoy!</p></div>
+                  
+                </div>
+<p>The DnD-UI Toolkit plugin has some bugs with showing abilities and skills in the main tab box as of July 2025. The Initiative badge and Skills block don’t render properly at the moment, so you need to click the link button at the top of the General block and Abilities block to see them accurately.
+If you are struggling with any of the formatting and syntax of this template, check out the docs from the following sources: </p>
+</blockquote>
+</div>
+</blockquote>
+<h1 id="abilities">Abilities<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#abilities" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="#abilities" class="internal alias">🔗</a></p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="ability" data-theme="github-light github-dark"><code data-language="ability" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>abilities:</span></span>
+<span data-line><span>  strength: 8</span></span>
+<span data-line><span>  dexterity: 8</span></span>
+<span data-line><span>  constitution: 8</span></span>
+<span data-line><span>  intelligence: 8</span></span>
+<span data-line><span>  wisdom: 8</span></span>
+<span data-line><span>  charisma: 8</span></span>
+<span data-line> </span>
+<span data-line><span>proficiencies:</span></span>
+<span data-line><span>  - </span></span>
+<span data-line><span>  - </span></span>
+<span data-line> </span>
+<span data-line><span>bonuses:</span></span>
+<span data-line><span>  - name: </span></span>
+<span data-line><span>    target: </span></span>
+<span data-line><span>    value: </span></span>
+<span data-line><span>    modifies: </span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="skills" data-theme="github-light github-dark"><code data-language="skills" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>proficiencies:</span></span>
+<span data-line><span>  - acrobatics</span></span>
+<span data-line> </span>
+<span data-line><span>expertise:</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="badges" data-theme="github-light github-dark"><code data-language="badges" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>items:</span></span>
+<span data-line><span>  - label: Passive Perception</span></span>
+<span data-line><span>    value: '{{ add 10 (modifier abilities.wisdom) }}'</span></span></code></pre></figure>
+<blockquote class="callout recite" data-callout="recite" data-callout-metadata="bg-white t-w ws-med">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Other Proficiencies &amp; Training </p></div>
+                  
+                </div>
+<div class="callout-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Proficiency Type</th><th>Description</th></tr></thead><tbody><tr><td><strong>Armor</strong></td><td></td></tr><tr><td><strong>Weapons</strong></td><td></td></tr><tr><td><strong>Tools</strong></td><td></td></tr><tr><td><strong>Languages</strong></td><td></td></tr><tr><td><strong>Other</strong></td><td></td></tr></tbody></table></div>
+</div>
+</blockquote>
+<h1 id="quick-reference">Quick Reference<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#quick-reference" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="#quick-reference" class="internal alias">🔗</a></p>
+<p><strong>A quick reference for things you can do on your turn, as well as various conditions and effects</strong></p>
+<iframe src="https://donjon.bin.sh/5e/quickref/" width="150" height="300" style="overflow:auto;resize:both;aspect-ratio:16 / 9;width:100%;height:100%;">
+</iframe> 
+<h1 id="equipment">Equipment<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#equipment" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="#equipment" class="internal alias">🔗</a></p>
+<h2 id="weapons-action">Weapons <a href="../.././../tags/action" class="tag-link internal alias" data-slug="tags/action">action</a><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#weapons-action" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Item</th><th>Range</th><th>ATK Bonus</th><th>Damage / Type</th><th><em>Properties / Notes</em></th></tr></thead><tbody><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Ammunition Type</th><th>Count</th></tr></thead><tbody><tr><td></td><td><code>INPUT[number(class(wider),placeholder(0)):ammo1]</code></td></tr><tr><td></td><td><code>INPUT[number(class(wider),placeholder(0)):ammo2]</code></td></tr></tbody></table></div>
+<h2 id="armor">Armor<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#armor" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Equip</th><th>Item</th><th>Type</th><th>AC</th><th>Stealth</th><th><em>Properties / Notes</em></th></tr></thead><tbody><tr><td><code>INPUT[toggle:AC1]</code></td><td>Unarmored</td><td>Light</td><td>10+DEX</td><td>---</td><td></td></tr><tr><td><code>INPUT[toggle:AC2]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:AC3]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:AC4]</code></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></div>
+<h2 id="attunement-slots">Attunement Slots<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#attunement-slots" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Slot</th><th>Item</th><th>Body Part</th><th>Summary</th></tr></thead><tbody><tr><td><strong>1</strong></td><td></td><td></td><td></td></tr><tr><td><strong>2</strong></td><td></td><td></td><td></td></tr><tr><td><strong>3</strong></td><td></td><td></td><td></td></tr></tbody></table></div>
+<h1 id="inventory">Inventory<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#inventory" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="#inventory" class="internal alias">🔗</a></p>
+<ul>
+<li><strong>Current Encumbrance</strong>
+<ul>
+<li><code>INPUT[number(class(wider),placeholder(Held)):CARRY]</code><strong>lbs</strong></li>
+</ul>
+</li>
+</ul>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="badges" data-theme="github-light github-dark"><code data-language="badges" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>items:</span></span>
+<span data-line><span>  - label: Capacity</span></span>
+<span data-line><span>    value: '{{ multiply 15 abilities.strength }}lbs'</span></span></code></pre></figure>
+<h2 id="coin-purse">Coin-purse<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#coin-purse" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout recite" data-callout="recite" data-callout-metadata="wm-sm txt-c t-w table-cell-top">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Treasure </p></div>
+                  
+                </div>
+<div class="callout-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>CP</th><th>SP</th><th>EP</th><th>GP</th><th>PP</th></tr></thead><tbody><tr><td><code>INPUT[number(class(wider),placeholder(0)):CP]</code></td><td><code>INPUT[number(class(wider),placeholder(0)):SP]</code></td><td><code>INPUT[number(class(wider),placeholder(0)):EP]</code></td><td><code>INPUT[number(class(wider),placeholder(0)):GP]</code></td><td><code>INPUT[number(class(wider),placeholder(0)):PP]</code></td></tr><tr><td><code>INPUT[textArea(placeholder(Treasure)):TREASURE]</code></td><td></td><td></td><td></td><td></td></tr></tbody></table></div>
+</div>
+</blockquote>
+<h2 id="carried-items">Carried Items<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#carried-items" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><strong>Tip!</strong> You can <em>Insert Template</em> here and select <em>Item Card Template</em> to quickly add items. Make sure each item has a unique ^block-id so you can link it later! Items with charges also need unique <em>state keys</em>.</li>
+</ul>
+<blockquote class="callout recite is-collapsible is-collapsed" data-callout="recite" data-callout-fold data-callout-metadata="alt-line txt-s nmg clean collapse nbrd clear bg-yellow">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Item Example </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<h2 id="quantity-1xweight-0-lbsitem-type-weapon-tool-etc"><strong>Quantity:</strong> 1x
+<strong>Weight:</strong> 0 lbs
+<strong>Item Type:</strong> Weapon, Tool, etc<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#quantity-1xweight-0-lbsitem-type-weapon-tool-etc" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+</div>
+</blockquote>
+<p><strong>Description.</strong> Here is where you can place your item description.</p>
+<blockquote>
+<figure data-rehype-pretty-code-figure id="unique-item-ID"><pre tabindex="0" data-language="consumable" data-theme="github-light github-dark"><code data-language="consumable" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>items:</span></span>
+<span data-line><span>  - label: &quot;Charges&quot;</span></span>
+<span data-line><span>    state_key: my_character_example_item</span></span>
+<span data-line><span>    uses: 1</span></span>
+<span data-line><span>    reset_on: long-rest</span></span></code></pre></figure>
+<p></p>
+</blockquote>
+<h2 id="other-storage-bag-of-holding-etc">Other Storage (Bag Of Holding, etc)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#other-storage-bag-of-holding-etc" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><strong>Capacity:</strong> X lbs</li>
+</ul>
+<h1 id="spellcasting">Spellcasting<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#spellcasting" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="#spellcasting" class="internal alias">🔗</a></p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="stats" data-theme="github-light github-dark"><code data-language="stats" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>items:</span></span>
+<span data-line><span>  - label: Spellcasting Class</span></span>
+<span data-line><span>    value: </span></span>
+<span data-line><span>  - label: Spellcasting Ability</span></span>
+<span data-line><span>    value: </span></span>
+<span data-line><span>  - label: Spell Save DC</span></span>
+<span data-line><span>    value: '{{ add 8 frontmatter.proficiency_bonus (modifier abilities.intelligence) }}'</span></span>
+<span data-line><span>  - label: Spell Attack Bonus</span></span>
+<span data-line><span>    value: '+{{ add frontmatter.proficiency_bonus (modifier abilities.intelligence) }}'</span></span>
+<span data-line> </span>
+<span data-line><span>grid:</span></span>
+<span data-line><span>  columns: 4</span></span>
+<span data-line> </span>
+<span data-line><span>dense: true</span></span></code></pre></figure>
+<blockquote class="callout recite is-collapsible is-collapsed" data-callout="recite" data-callout-fold data-callout-metadata="t-w">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Spellcasting Focus </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Name</th><th>Type</th><th>Properties &amp; Notes</th></tr></thead><tbody><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr></tbody></table></div>
+</div>
+</blockquote>
+<blockquote class="callout columns" data-callout="columns" data-callout-metadata="no-t nmg">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Spell List </p></div>
+                  
+                </div>
+<div class="callout-content">
+<blockquote class="callout recite" data-callout="recite" data-callout-metadata="t-w">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Cantrips </p></div>
+                  
+                </div>
+<div class="callout-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Spell</th><th>Casting Time</th><th>Range</th><th>Duration</th><th>Components</th></tr></thead><tbody><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></div>
+</div>
+</blockquote>
+<blockquote class="callout recite" data-callout="recite" data-callout-metadata="t-w txt-s nmg">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1st Level </p></div>
+                  
+                </div>
+<div class="callout-content">
+<blockquote class="callout recite" data-callout="recite" data-callout-metadata="txt-s alt-line">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>LV1 Spell Slots </p></div>
+                  
+                </div>
+<div class="callout-content">
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="consumable" data-theme="github-light github-dark"><code data-language="consumable" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>items:</span></span>
+<span data-line><span>  - label: &quot;Spell Slots LV1&quot;</span></span>
+<span data-line><span>    state_key: my_character_SPL1</span></span>
+<span data-line><span>    reset_on: long-rest</span></span>
+<span data-line><span>    uses: 0</span></span></code></pre></figure>
+</div>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Prep.</th><th>Spell</th><th>Casting Time</th><th>Range</th><th>Duration</th><th>Components</th></tr></thead><tbody><tr><td><code>INPUT[toggle:SP1-1]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP1-2]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP1-3]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP1-4]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP1-5]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP1-6]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP1-7]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP1-8]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP1-9]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP1-10]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP1-11]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP1-12]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP1-13]</code></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></div>
+</div>
+</blockquote>
+<blockquote class="callout recite" data-callout="recite" data-callout-metadata="t-w txt-s nmg">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2nd Level </p></div>
+                  
+                </div>
+<div class="callout-content">
+<blockquote class="callout recite" data-callout="recite" data-callout-metadata="txt-s alt-line">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>LV2 Spell Slots </p></div>
+                  
+                </div>
+<div class="callout-content">
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="consumable" data-theme="github-light github-dark"><code data-language="consumable" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>items:</span></span>
+<span data-line><span>  - label: &quot;Spell Slots LV2&quot;</span></span>
+<span data-line><span>    state_key: my_character_SPL2</span></span>
+<span data-line><span>    reset_on: long-rest</span></span>
+<span data-line><span>    uses: 0</span></span></code></pre></figure>
+</div>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Prep.</th><th>Spell</th><th>Casting Time</th><th>Range</th><th>Duration</th><th>Components</th></tr></thead><tbody><tr><td><code>INPUT[toggle:SP2-1]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP2-2]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP2-3]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP2-4]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP2-5]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP2-6]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP2-7]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP2-8]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP2-9]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP2-10]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP2-11]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP2-12]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP2-13]</code></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></div>
+</div>
+</blockquote>
+<blockquote class="callout recite" data-callout="recite" data-callout-metadata="t-w txt-s nmg">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3rd Level </p></div>
+                  
+                </div>
+<div class="callout-content">
+<blockquote class="callout recite" data-callout="recite" data-callout-metadata="txt-s alt-line">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>LV3 Spell Slots </p></div>
+                  
+                </div>
+<div class="callout-content">
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="consumable" data-theme="github-light github-dark"><code data-language="consumable" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>items:</span></span>
+<span data-line><span>  - label: &quot;Spell Slots LV3&quot;</span></span>
+<span data-line><span>    state_key: my_character_SPL3</span></span>
+<span data-line><span>    reset_on: long-rest</span></span>
+<span data-line><span>    uses: 0</span></span></code></pre></figure>
+</div>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Prep.</th><th>Spell</th><th>Casting Time</th><th>Range</th><th>Duration</th><th>Components</th></tr></thead><tbody><tr><td><code>INPUT[toggle:SP3-1]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP3-2]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP3-3]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP3-4]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP3-5]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP3-6]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP3-7]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP3-8]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP3-9]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP3-10]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP3-11]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP3-12]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP3-13]</code></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></div>
+</div>
+</blockquote>
+<blockquote class="callout recite" data-callout="recite" data-callout-metadata="t-w txt-s nmg">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4th Level </p></div>
+                  
+                </div>
+<div class="callout-content">
+<blockquote class="callout recite" data-callout="recite" data-callout-metadata="txt-s alt-line">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>LV4 Spell Slots </p></div>
+                  
+                </div>
+<div class="callout-content">
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="consumable" data-theme="github-light github-dark"><code data-language="consumable" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>items:</span></span>
+<span data-line><span>  - label: &quot;Spell Slots LV4&quot;</span></span>
+<span data-line><span>    state_key: my_character_SPL4</span></span>
+<span data-line><span>    reset_on: long-rest</span></span>
+<span data-line><span>    uses: 0</span></span></code></pre></figure>
+</div>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Prep.</th><th>Spell</th><th>Casting Time</th><th>Range</th><th>Duration</th><th>Components</th></tr></thead><tbody><tr><td><code>INPUT[toggle:SP4-1]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP4-2]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP4-3]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP4-4]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP4-5]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP4-6]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP4-7]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP4-8]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP4-9]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP4-10]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP4-11]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP4-12]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP4-13]</code></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></div>
+</div>
+</blockquote>
+<blockquote class="callout recite" data-callout="recite" data-callout-metadata="t-w txt-s nmg">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>5th Level </p></div>
+                  
+                </div>
+<div class="callout-content">
+<blockquote class="callout recite" data-callout="recite" data-callout-metadata="txt-s alt-line">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>LV5 Spell Slots </p></div>
+                  
+                </div>
+<div class="callout-content">
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="consumable" data-theme="github-light github-dark"><code data-language="consumable" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>items:</span></span>
+<span data-line><span>  - label: &quot;Spell Slots LV5&quot;</span></span>
+<span data-line><span>    state_key: my_character_SPL5</span></span>
+<span data-line><span>    reset_on: long-rest</span></span>
+<span data-line><span>    uses: 0</span></span></code></pre></figure>
+</div>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Prep.</th><th>Spell</th><th>Casting Time</th><th>Range</th><th>Duration</th><th>Components</th></tr></thead><tbody><tr><td><code>INPUT[toggle:SP5-1]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP5-2]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP5-3]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP5-4]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP5-5]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP5-6]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP5-7]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP5-8]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP5-9]</code></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></div>
+</div>
+</blockquote>
+<blockquote class="callout recite" data-callout="recite" data-callout-metadata="t-w txt-s nmg">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>6th Level </p></div>
+                  
+                </div>
+<div class="callout-content">
+<blockquote class="callout recite" data-callout="recite" data-callout-metadata="txt-s alt-line">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>LV6 Spell Slots </p></div>
+                  
+                </div>
+<div class="callout-content">
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="consumable" data-theme="github-light github-dark"><code data-language="consumable" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>items:</span></span>
+<span data-line><span>  - label: &quot;Spell Slots LV6&quot;</span></span>
+<span data-line><span>    state_key: my_character_SPL6</span></span>
+<span data-line><span>    reset_on: long-rest</span></span>
+<span data-line><span>    uses: 0</span></span></code></pre></figure>
+</div>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Prep.</th><th>Spell</th><th>Casting Time</th><th>Range</th><th>Duration</th><th>Components</th></tr></thead><tbody><tr><td><code>INPUT[toggle:SP6-1]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP6-2]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP6-3]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP6-4]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP6-5]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP6-6]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP6-7]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP6-8]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP6-9]</code></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></div>
+</div>
+</blockquote>
+<blockquote class="callout recite" data-callout="recite" data-callout-metadata="t-w txt-s nmg">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>7th Level </p></div>
+                  
+                </div>
+<div class="callout-content">
+<blockquote class="callout recite" data-callout="recite" data-callout-metadata="txt-s alt-line">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>LV7 Spell Slots </p></div>
+                  
+                </div>
+<div class="callout-content">
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="consumable" data-theme="github-light github-dark"><code data-language="consumable" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>items:</span></span>
+<span data-line><span>  - label: &quot;Spell Slots LV7&quot;</span></span>
+<span data-line><span>    state_key: my_character_SPL7</span></span>
+<span data-line><span>    reset_on: long-rest</span></span>
+<span data-line><span>    uses: 0</span></span></code></pre></figure>
+</div>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Prep.</th><th>Spell</th><th>Casting Time</th><th>Range</th><th>Duration</th><th>Components</th></tr></thead><tbody><tr><td><code>INPUT[toggle:SP7-1]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP7-2]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP7-3]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP7-4]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP7-5]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP7-6]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP7-7]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP7-8]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP7-9]</code></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></div>
+</div>
+</blockquote>
+<blockquote class="callout recite" data-callout="recite" data-callout-metadata="t-w txt-s nmg">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>8th Level </p></div>
+                  
+                </div>
+<div class="callout-content">
+<blockquote class="callout recite" data-callout="recite" data-callout-metadata="txt-s alt-line">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>LV8 Spell Slots </p></div>
+                  
+                </div>
+<div class="callout-content">
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="consumable" data-theme="github-light github-dark"><code data-language="consumable" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>items:</span></span>
+<span data-line><span>  - label: &quot;Spell Slots LV8&quot;</span></span>
+<span data-line><span>    state_key: my_character_SPL8</span></span>
+<span data-line><span>    reset_on: long-rest</span></span>
+<span data-line><span>    uses: 0</span></span></code></pre></figure>
+</div>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Prep.</th><th>Spell</th><th>Casting Time</th><th>Range</th><th>Duration</th><th>Components</th></tr></thead><tbody><tr><td><code>INPUT[toggle:SP8-1]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP8-2]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP8-3]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP8-4]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP8-5]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP8-6]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP8-7]</code></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></div>
+</div>
+</blockquote>
+<blockquote class="callout recite" data-callout="recite" data-callout-metadata="t-w txt-s nmg">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>9th Level </p></div>
+                  
+                </div>
+<div class="callout-content">
+<blockquote class="callout recite" data-callout="recite" data-callout-metadata="txt-s alt-line">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>LV9 Spell Slots </p></div>
+                  
+                </div>
+<div class="callout-content">
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="consumable" data-theme="github-light github-dark"><code data-language="consumable" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>items:</span></span>
+<span data-line><span>  - label: &quot;Spell Slots LV9&quot;</span></span>
+<span data-line><span>    state_key: my_character_SPL9</span></span>
+<span data-line><span>    reset_on: long-rest</span></span>
+<span data-line><span>    uses: 0</span></span></code></pre></figure>
+</div>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Prep.</th><th>Spell</th><th>Casting Time</th><th>Range</th><th>Duration</th><th>Components</th></tr></thead><tbody><tr><td><code>INPUT[toggle:SP9-1]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP9-2]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP9-3]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP9-4]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP9-5]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP9-6]</code></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>INPUT[toggle:SP9-7]</code></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></div>
+</div>
+</blockquote>
+</div>
+</blockquote>
+<h1 id="features--traits">Features &amp; Traits<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#features--traits" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="#features--traits" class="internal alias">🔗</a></p>
+<ul>
+<li><strong>Tip!</strong> You can <em>Insert Template</em> here and select <em>Feature Card Template</em> to quickly add a feature. Features with consumables need unique <em>state keys</em>.</li>
+</ul>
+<blockquote class="callout recite is-collapsible is-collapsed" data-callout="recite" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Search Action/Bonus Action/Reaction </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<blockquote class="callout recite is-collapsible is-collapsed" data-callout="recite" data-callout-fold data-callout-metadata="alt-line txt-s">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Actions </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="query" data-theme="github-light github-dark"><code data-language="query" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>line:#action</span></span>
+<span data-line><span>title: A C T I O N S</span></span></code></pre></figure>
+</div>
+</blockquote>
+<blockquote class="callout recite is-collapsible is-collapsed" data-callout="recite" data-callout-fold data-callout-metadata="alt-line txt-s">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Bonus Actions </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="query" data-theme="github-light github-dark"><code data-language="query" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>line:#bonus-action</span></span>
+<span data-line><span>title: B O N U S - A C T I O N S</span></span></code></pre></figure>
+</div>
+</blockquote>
+<blockquote class="callout recite is-collapsible is-collapsed" data-callout="recite" data-callout-fold data-callout-metadata="alt-line txt-s">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Reactions </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="query" data-theme="github-light github-dark"><code data-language="query" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>line:#reaction</span></span>
+<span data-line><span>title: R E A C T I O N S</span></span></code></pre></figure>
+</div>
+</blockquote>
+</div>
+</blockquote>
+<h4 id="senses--vulnerabilities">Senses &amp; Vulnerabilities<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#senses--vulnerabilities" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p><strong>Senses:</strong>
+<strong>Resistances:</strong>
+<strong>Vulnerabilities:</strong>
+<strong>Immunities:</strong></p>
+<h2 id="actions-action">Actions <a href="../.././../tags/action" class="tag-link internal alias" data-slug="tags/action">action</a><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#actions-action" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 id="bonus-actions-bonus-action">Bonus Actions <a href="../.././../tags/bonus-action" class="tag-link internal alias" data-slug="tags/bonus-action">bonus-action</a><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#bonus-actions-bonus-action" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 id="other-features">Other Features<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#other-features" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout recite is-collapsible" data-callout="recite" data-callout-fold data-callout-metadata="nmg">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Feature Example </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<h1 id="feature">Feature<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#feature" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><em>Source: Lvl 10 Class Feature / PHB / Race / ETC</em>
+—</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="consumable" data-theme="github-light github-dark"><code data-language="consumable" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>items:</span></span>
+<span data-line><span>  - label: &quot;Charges&quot;</span></span>
+<span data-line><span>    state_key: my_character_feature</span></span>
+<span data-line><span>    uses: 3</span></span>
+<span data-line><span>    reset_on: long-rest</span></span></code></pre></figure>
+<p>Description of feature.</p>
+</div>
+</blockquote>
+<h1 id="backstory">Backstory<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#backstory" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="#backstory" class="internal alias">🔗</a></p>
+<hr/>
+<hr/>
+<h1 id="misc">Misc.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#misc" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="#misc" class="internal alias">🔗</a></p>
+<hr/>
+<hr/>
+<h1 id="notes">Notes<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#notes" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="#notes" class="internal alias">🔗</a></p>
+<hr/></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-69" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#character-name" data-for="character-name">Character Name</a></li><li class="depth-0"><a href="#general" data-for="general">General</a></li><li class="depth-0"><a href="#description" data-for="description">Description</a></li><li class="depth-0"><a href="#image-gallery" data-for="image-gallery">Image Gallery</a></li><li class="depth-0"><a href="#config" data-for="config">Config</a></li><li class="depth-0"><a href="#abilities" data-for="abilities">Abilities</a></li><li class="depth-0"><a href="#quick-reference" data-for="quick-reference">Quick Reference</a></li><li class="depth-0"><a href="#equipment" data-for="equipment">Equipment</a></li><li class="depth-1"><a href="#weapons-action" data-for="weapons-action">Weapons action</a></li><li class="depth-1"><a href="#armor" data-for="armor">Armor</a></li><li class="depth-1"><a href="#attunement-slots" data-for="attunement-slots">Attunement Slots</a></li><li class="depth-0"><a href="#inventory" data-for="inventory">Inventory</a></li><li class="depth-1"><a href="#coin-purse" data-for="coin-purse">Coin-purse</a></li><li class="depth-1"><a href="#carried-items" data-for="carried-items">Carried Items</a></li><li class="depth-1"><a href="#quantity-1xweight-0-lbsitem-type-weapon-tool-etc" data-for="quantity-1xweight-0-lbsitem-type-weapon-tool-etc">Quantity: 1x
+Weight: 0 lbs
+Item Type: Weapon, Tool, etc</a></li><li class="depth-1"><a href="#other-storage-bag-of-holding-etc" data-for="other-storage-bag-of-holding-etc">Other Storage (Bag Of Holding, etc)</a></li><li class="depth-0"><a href="#spellcasting" data-for="spellcasting">Spellcasting</a></li><li class="depth-0"><a href="#features--traits" data-for="features--traits">Features &amp; Traits</a></li><li class="depth-1"><a href="#actions-action" data-for="actions-action">Actions action</a></li><li class="depth-1"><a href="#bonus-actions-bonus-action" data-for="bonus-actions-bonus-action">Bonus Actions bonus-action</a></li><li class="depth-1"><a href="#other-features" data-for="other-features">Other Features</a></li><li class="depth-0"><a href="#feature" data-for="feature">Feature</a></li><li class="depth-0"><a href="#backstory" data-for="backstory">Backstory</a></li><li class="depth-0"><a href="#misc" data-for="misc">Misc.</a></li><li class="depth-0"><a href="#notes" data-for="notes">Notes</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../postscript.js" type="module" data-persist="true"></script></html>
